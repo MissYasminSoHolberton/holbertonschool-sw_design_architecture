@@ -1,0 +1,28 @@
+classDiagram
+    class Library {
+        +add_book()
+        +register_user()
+        +create_loan()
+    }
+    class Book {
+        +str title
+        +str author
+        +str state
+        +mark_as_unavailable()
+        +mark_as_available()
+    }
+    class User {
+        +str name
+        +str email
+    }
+    class Loan {
+        +str start_date
+        +str end_date
+    }
+    Book o-- User
+    Library o-- Book
+    Loan *-- Book
+    Loan *-- User
+    Book o-- Loan
+    User o-- Loan
+    User o-- Book
