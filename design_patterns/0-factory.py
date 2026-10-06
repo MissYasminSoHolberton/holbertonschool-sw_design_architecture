@@ -48,5 +48,6 @@ def main() -> None:
     print(factory.create("bike").mode())
     print(factory.create("scooter").mode())
 
+
 if __name__ == "__main__":
     main()
